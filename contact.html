@@ -21,6 +21,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon\favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon\favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script>
+        function playSound() {
+            var audio = new Audio("stuff/click.mp3");
+            audio.play();
+        }
+    </script>
 
 </head>
 
@@ -55,8 +61,7 @@
                 <input type="text" name="phone" placeholder="Enter Phone number" required>
                 <input type="text" name="subject" placeholder="What brings you here?" required>
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Submit" ONCLICK="alert('Thank you! \nYour response was submitted')" class="submit-btn">
-            </form>
+                <input type="submit" value="Submit" onclick="playSound(); alert('Thank you!Your response was submitted');" class="submit-btn">            </form>
         </div>
 
     </section>
